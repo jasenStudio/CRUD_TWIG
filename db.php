@@ -6,10 +6,10 @@ use PDOException;
 class db
 {
 
-    public $host = 'xxxxx';
-    public $dbname = 'xxxxxx';
-    public $username = 'xxxxx'; // Reemplaza con tu usuario de MySQL
-    public $password = 'xxxxx';
+    private $host = 'xxxxx';
+    private $dbname = 'xxxxxx';
+    private $username = 'xxxxx'; // Reemplaza con tu usuario de MySQL
+    private $password = 'xxxxx';
     private $pdo;
 
     public function __construct()
