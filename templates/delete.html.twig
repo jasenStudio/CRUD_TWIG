@@ -1,0 +1,12 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}Eliminar Usuario{% endblock %}
+
+{% block content %}
+    <h2 class="fs-4 my-4">Eliminar Usuario</h2>
+    <p>¿Estás seguro de que quieres eliminar a {{ data.name }}?</p>
+    <form action="index.php?action=delete&id={{ data.id }}" method="post">
+        <button type="submit" class="btn btn-danger me-4">Sí, eliminar</button>
+        <a href="index.php" class="link-underline link-underline-opacity-0">No, cancelar</a>
+    </form>
+{% endblock %}

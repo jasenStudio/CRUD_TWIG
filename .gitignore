@@ -1,0 +1,17 @@
+/vendor/
+/composer.lock
+
+# Archivos de configuración locales
+.env
+.env.local
+.env.*.local
+.phpunit.result.cache
+
+# Archivos de caché y logs
+/cache/
+/logs/
+/tmp/
+/node_modules/
+
+/.idea/
+/.vscode/

@@ -1,0 +1,52 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}Lista de Usuarios{% endblock %}
+
+{% block content %}
+
+<div class="table-responsive">
+
+    <table border="1" class="table table-sm table-striped table-hover text-center caption-top">
+        <caption class="fs-3">Lista de usuarios</caption>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col" colspan="2">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+ {% if users|length != 0 %}
+ 
+     {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>
+                    <a class="link-underline link-underline-opacity-0" href="index.php?action=edit&id={{ user.id }}">Editar</a>
+                    
+                </td>
+                <td>
+<a class="link-underline link-underline-opacity-0" href="index.php?action=delete&id={{ user.id }}">Eliminar</a>
+
+                </td>
+            </tr>
+            {% endfor %}
+            {% else %}
+
+
+            <tr>
+                <td colspan="3">
+                       <div> No hay usuarios </div>
+                </td>
+            </tr>
+
+         
+ {% endif %}
+
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

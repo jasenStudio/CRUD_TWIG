@@ -1,0 +1,13 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}Crear Usuario{% endblock %}
+
+{% block content %}
+    <h2 class="fs-4 my-4">Crear Usuario</h2>
+    <form action="index.php?action=create" method="post">
+        <label class="form-label" for="name">Nombre:</label>
+        <input class="form-control"type="text" id="name" name="name" required>
+        <button type="submit" class="btn btn-primary my-3">Guardar</button>
+        <a href="index.php" type="submit" class="btn btn-danger my-3 mx-4">Cancelar</a>
+    </form>
+{% endblock %}
